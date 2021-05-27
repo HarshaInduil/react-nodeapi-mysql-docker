@@ -26,6 +26,11 @@ const useStyles = makeStyles({
   },
 });
 
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
+
 function ItemComponent(props) {
   const classes = useStyles();
   return (
@@ -52,7 +57,7 @@ function ItemComponent(props) {
           </Typography>
         </CardContent>
         <CardActions>
-        <Button size="sm" variant="contained"  color="primary" className={classes.margin}>View</Button>
+        <Button size="sm" variant="contained"  color="primary" className={classes.margin} onClick={() => openInNewTab('https://localhost:8282/')}>View</Button>
         </CardActions>
       </Card>
     </>

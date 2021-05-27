@@ -46,7 +46,7 @@ function App() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              News
+              App One
             </Typography>
             <Button color="inherit" onClick={() => openInNewTab('https://localhost:8282/')}>Go to Second APP</Button>
           </Toolbar>
